@@ -55,8 +55,36 @@
         </div>
     </section>
 
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl leading-9 font-extrabold text-gray-900 dark:text-white sm:text-4xl sm:leading-10">
+                    Pricing
+                </h2>
+                <p class="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-400">
+                    Choose your crawling experience.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto bg-gray-50 dark:bg-gray-700 shadow-md rounded-lg overflow-hidden border-t-4 border-rc-red">
+                <ul class="divide-y divide-gray-200 dark:divide-gray-600">
+                    {{ range .Params.pricing }}
+                    <li class="px-6 py-4 flex justify-between items-center hover:bg-gray-100 dark:hover:bg-gray-600 transition duration-150">
+                        <span class="text-lg font-medium text-gray-900 dark:text-white">{{ .name }}</span>
+                        <span class="text-xl font-bold text-rc-red dark:text-red-400">{{ .price }}</span>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="max-w-3xl mx-auto mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                <p><strong>Disclaimer:</strong> Recommended for ages 12 and older due to skill level and speed control requirements. Not suitable for younger children handling on their own. Adult supervision required.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Info Section: Hours & Location -->
-    <section id="hours" class="py-16 bg-white dark:bg-gray-800">
+    <section id="hours" class="py-16 bg-gray-100 dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 
@@ -65,8 +93,28 @@
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Hours of Operation</h3>
                     <ul class="space-y-4 text-lg text-gray-600 dark:text-gray-300">
                         <li class="flex justify-between border-b border-gray-200 dark:border-gray-600 pb-2">
-                            <span class="font-medium">Mon - Sat:</span>
-                            <span>{{ .Params.hours.monday_saturday }}</span>
+                            <span class="font-medium">Monday:</span>
+                            <span>{{ .Params.hours.monday }}</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-200 dark:border-gray-600 pb-2">
+                            <span class="font-medium">Tuesday:</span>
+                            <span>{{ .Params.hours.tuesday }}</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-200 dark:border-gray-600 pb-2">
+                            <span class="font-medium">Wednesday:</span>
+                            <span>{{ .Params.hours.wednesday }}</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-200 dark:border-gray-600 pb-2">
+                            <span class="font-medium">Thursday:</span>
+                            <span>{{ .Params.hours.thursday }}</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-200 dark:border-gray-600 pb-2">
+                            <span class="font-medium">Friday:</span>
+                            <span>{{ .Params.hours.friday }}</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-200 dark:border-gray-600 pb-2">
+                            <span class="font-medium">Saturday:</span>
+                            <span>{{ .Params.hours.saturday }}</span>
                         </li>
                         <li class="flex justify-between border-b border-gray-200 dark:border-gray-600 pb-2">
                             <span class="font-medium">Sunday:</span>

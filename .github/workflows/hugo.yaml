@@ -64,7 +64,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "https://Farmers00.github.io/rc_crawler_shop/"
+            --baseURL "https://rcrcusa.com/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
