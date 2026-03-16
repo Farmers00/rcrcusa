@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{ template "_default/head.html" . }}
+</head>
+<body class="bg-gray-50 text-gray-900">
+	{{ template "_default/header.html" . }}
+
+	<main class="container mx-auto px-4 py-8">
+						<h1 class="text-3xl font-bold mb-6">{{ .Plural }}</h1>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			{{ range .Taxonomy.Terms }}
+				<div class="bg-white rounded-lg shadow p-6">
+					<h2 class="text-xl font-semibold mb-2">{{ .Term }} ({{ .Count }})</h2>
+					<ul class="list-disc pl-5">
+						{{ range .Pages }}
+							<li>{{ .Title }}</li>
+						{{ end }}
+					</ul>
+				</div>
+			{{ end }}
+		</div>
+	</main>
+
+	{{ template "_default/footer.html" . }}
+</body>
+</html>

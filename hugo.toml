@@ -1,7 +1,10 @@
 baseURL = 'https://rcrcusa.com/'
 languageCode = 'en-us'
-title = 'RC RC Colorado'
-
+title = 'RC RC USA'
 
 [params]
-  description = "The World's Greatest 1/18-Scale Crawler Course"
+  description = "Colorado Springs Greatest 1:18 & 1:24 - Scale Crawler Course"
+
+[taxonomies]
+  tag = ""
+  category = ""
