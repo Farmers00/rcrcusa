@@ -8,6 +8,6 @@ public/
 resources/
 .hugo_build.lock
 
-# Notes
+# DIR
 notes.md
 AGENTS.md
