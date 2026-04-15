@@ -22,8 +22,8 @@ pricing:
     price: "$25"
 location:
   address: "Chapel Hills Mall, 1710 Briargate Blvd, Colorado Springs, CO 80920"
-  notes: "Located inside the mall, near Dick's Sporting Goods."
-  map_url: "https://www.google.com/maps/search/?api=1&query=Chapel+Hills+Mall+1710+Briargate+Blvd+Colorado+Springs+CO+80920"
+  notes: "Located on the first floor of the mall, across from Dick's Sporting Goods."
+  map_url: "https://maps.app.goo.gl/g3hWQY5Q2N4VopDM6"
 owners:
   - name: "Ben Dallas"
     role: "Owner"
@@ -31,13 +31,11 @@ owners:
     role: "Owner"
 ---
 
-## Welcome to RC RC
-
 We are Colorado Springs greatest 1:18 & 1:24 - scale crawler course! Our facility is a family-friendly indoor RC crawler center specifically designed for 1:18 and 1:24 scale remote control vehicles.
 
 ### What We Offer
 
-*   **Dedicated Terrain:** 100% hand-crafted elements like canyon slopes, waterfall structures, rope bridges, and jungle crevices.
+*   **Dedicated Terrain:** 100% hand-crafted elements like canyon slopes, the lunar surface, rope bridges, and jungle crevices.
 *   **Rentals & BYO:** Rent one of our premium RTR trucks or bring your own rig to conquer the course.
 *   **Challenges:** From a 30-minute "Crawler Intro" to the grueling 2-hour "Atlas Challenge".
 
