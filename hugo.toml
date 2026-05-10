@@ -1,6 +1,7 @@
 baseURL = 'https://rcrcusa.com/'
 languageCode = 'en-us'
 title = 'RC RC USA'
+enableRobotsTXT = true
 
 [params]
   description = "Colorado Springs Greatest 1:18 & 1:24 - Scale Crawler Course"
