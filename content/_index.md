@@ -20,6 +20,8 @@ pricing:
     price: "$10/hour"
   - name: "BYO Crawler Day Pass"
     price: "$25"
+  - name: "Unlimited Monthly Membership"
+    price: "$99"
 location:
   address: "Chapel Hills Mall, 1710 Briargate Blvd, Colorado Springs, CO 80920"
   notes: "Located on the first floor of the mall, across from Dick's Sporting Goods."
