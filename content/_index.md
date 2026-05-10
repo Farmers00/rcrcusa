@@ -1,5 +1,5 @@
 ---
-title: "Colorado Springs Greatest 1:18 & 1:24 - Scale Crawler Course"
+title: "Colorado Springs Greatest 1:18, 1:24, 1:30, 1:32 - Scale Crawler Course"
 description: "Join us at RC RC for an immersive indoor RC crawling experience. Test your skills on our custom terrain!"
 hours:
   monday: "Closed"
