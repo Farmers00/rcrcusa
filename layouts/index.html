@@ -5,7 +5,18 @@
     <section class="relative bg-rc-dark text-white py-20 lg:py-32">
         <div class="absolute inset-0 overflow-hidden opacity-50">
             <!-- Background Image -->
-            <img src="{{ "images/background.jpg" | relURL }}" alt="Hero Background" class="w-full h-full object-cover">
+            {{ $bg := resources.Get "images/background.jpg" }}
+            {{ if $bg }}
+                {{ $bgSmall := $bg.Resize "800x webp q80" }}
+                {{ $bgMedium := $bg.Resize "1200x webp q80" }}
+                {{ $bgLarge := $bg.Resize "1600x webp q80" }}
+                <img src="{{ $bgLarge.RelPermalink }}" 
+                     srcset="{{ $bgSmall.RelPermalink }} 800w, {{ $bgMedium.RelPermalink }} 1200w, {{ $bgLarge.RelPermalink }} 1600w" 
+                     sizes="100vw"
+                     alt="Hero Background" class="w-full h-full object-cover">
+            {{ else }}
+                <img src="{{ "images/background.jpg" | relURL }}" alt="Hero Background" class="w-full h-full object-cover">
+            {{ end }}
         </div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
@@ -42,7 +53,18 @@
             <div class="relative w-full max-w-4xl mx-auto h-64 md:h-96 rounded-lg overflow-hidden shadow-2xl" id="slideshow-container">
                 {{ range $index, $slide := .Site.Data.slideshow }}
                 <div class="slide absolute inset-0 transition-opacity duration-1000 ease-in-out {{ if ne $index 0 }}hidden opacity-0{{ end }}">
-                    <img src="{{ $slide.url | relURL }}" alt="{{ $slide.caption }}" class="w-full h-full object-cover">
+                    {{ $slideImg := resources.Get $slide.url }}
+                    {{ if $slideImg }}
+                        {{ $sSmall := $slideImg.Resize "400x webp q80" }}
+                        {{ $sMedium := $slideImg.Resize "800x webp q80" }}
+                        {{ $sLarge := $slideImg.Resize "1200x webp q80" }}
+                        <img src="{{ $sLarge.RelPermalink }}" 
+                             srcset="{{ $sSmall.RelPermalink }} 400w, {{ $sMedium.RelPermalink }} 800w, {{ $sLarge.RelPermalink }} 1200w" 
+                             sizes="(max-width: 768px) 100vw, 800px"
+                             alt="{{ $slide.caption }}" class="w-full h-full object-cover">
+                    {{ else }}
+                        <img src="{{ $slide.url | relURL }}" alt="{{ $slide.caption }}" class="w-full h-full object-cover">
+                    {{ end }}
                     <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
                         <p class="text-lg font-semibold">{{ $slide.caption }}</p>
                     </div>
@@ -213,7 +235,13 @@
             
             <!-- Owners Group Photo -->
             <div class="mb-10 flex justify-center">
-                <img src="{{ "images/owners.jpg" | relURL }}" alt="RC RC Owners" class="rounded-lg shadow-lg max-w-full h-auto max-h-96 object-cover">
+                {{ $owners := resources.Get "images/owners.jpg" }}
+                {{ if $owners }}
+                    {{ $ownersWebp := $owners.Resize "800x webp q80" }}
+                    <img src="{{ $ownersWebp.RelPermalink }}" alt="RC RC Owners" class="rounded-lg shadow-lg max-w-full h-auto max-h-96 object-cover">
+                {{ else }}
+                    <img src="{{ "images/owners.jpg" | relURL }}" alt="RC RC Owners" class="rounded-lg shadow-lg max-w-full h-auto max-h-96 object-cover">
+                {{ end }}
             </div>
 
             <div class="flex flex-wrap justify-center gap-8">
