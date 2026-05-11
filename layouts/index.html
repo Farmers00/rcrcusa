@@ -13,9 +13,10 @@
                 <img src="{{ $bgLarge.RelPermalink }}" 
                      srcset="{{ $bgSmall.RelPermalink }} 800w, {{ $bgMedium.RelPermalink }} 1200w, {{ $bgLarge.RelPermalink }} 1600w" 
                      sizes="100vw"
+                     fetchpriority="high"
                      alt="Hero Background" class="w-full h-full object-cover">
             {{ else }}
-                <img src="{{ "images/background.jpg" | relURL }}" alt="Hero Background" class="w-full h-full object-cover">
+                <img src="{{ "images/background.jpg" | relURL }}" fetchpriority="high" alt="Hero Background" class="w-full h-full object-cover">
             {{ end }}
         </div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
