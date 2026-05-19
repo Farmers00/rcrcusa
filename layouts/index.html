@@ -14,9 +14,9 @@
                      srcset="{{ $bgSmall.RelPermalink }} 800w, {{ $bgMedium.RelPermalink }} 1200w, {{ $bgLarge.RelPermalink }} 1600w" 
                      sizes="100vw"
                      fetchpriority="high"
-                     alt="Hero Background" class="w-full h-full object-cover">
+                     alt="Detailed hand-crafted indoor RC crawler course with custom terrain" class="w-full h-full object-cover">
             {{ else }}
-                <img src="{{ "images/background.jpg" | relURL }}" fetchpriority="high" alt="Hero Background" class="w-full h-full object-cover">
+                <img src="{{ "images/background.jpg" | relURL }}" fetchpriority="high" alt="Detailed hand-crafted indoor RC crawler course with custom terrain" class="w-full h-full object-cover">
             {{ end }}
         </div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -239,9 +239,9 @@
                 {{ $owners := resources.Get "images/owners.jpg" }}
                 {{ if $owners }}
                     {{ $ownersWebp := $owners.Resize "800x webp q80" }}
-                    <img src="{{ $ownersWebp.RelPermalink }}" alt="RC RC Owners" class="rounded-lg shadow-lg max-w-full h-auto max-h-96 object-cover">
+                    <img src="{{ $ownersWebp.RelPermalink }}" alt="Owners Ben and Abram Dallas at their RC crawler facility in Colorado Springs" class="rounded-lg shadow-lg max-w-full h-auto max-h-96 object-cover">
                 {{ else }}
-                    <img src="{{ "images/owners.jpg" | relURL }}" alt="RC RC Owners" class="rounded-lg shadow-lg max-w-full h-auto max-h-96 object-cover">
+                    <img src="{{ "images/owners.jpg" | relURL }}" alt="Owners Ben and Abram Dallas at their RC crawler facility in Colorado Springs" class="rounded-lg shadow-lg max-w-full h-auto max-h-96 object-cover">
                 {{ end }}
             </div>
 

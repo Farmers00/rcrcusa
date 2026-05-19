@@ -5,6 +5,10 @@ enableRobotsTXT = true
 
 [params]
   description = "Discover the greatest 1:18 and 1:24 scale indoor RC crawler course in Colorado Springs. Bring your own rig or rent one and conquer our custom-built terrains!"
+  images = ["images/logo.jpg"]
+  social = [
+    { name = "Instagram", url = "https://www.instagram.com/rc_rc_colorado/" }
+  ]
 
 [taxonomies]
   tag = ""
